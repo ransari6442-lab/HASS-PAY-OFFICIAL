@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HAAS PAY - Simple • Safe • Fast | Earn 3% to 11% Commission</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navyDark: '#060a17',
+                        navyCard: '#0f172a',
+                        navyBorder: '#1e293b',
+                        electricYellow: '#FFE600',
+                        brandRed: '#FF003C',
+                        brandRedDark: '#C9002E',
+                        telegramBlue: '#229ED9',
+                        emeraldSuccess: '#00E676',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 1.5s infinite alternate',
+                        'float': 'float 3s ease-in-out infinite',
+                        'shine': 'shine 2s infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(255, 230, 0, 0.4), 0 0 5px rgba(255, 0, 60, 0.3)' },
+                            '100%': { boxShadow: '0 0 35px rgba(255, 230, 0, 0.9), 0 0 18px rgba(255, 0, 60, 0.7)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-6px)' }
+                        },
+                        shine: {
+                            '100%': { left: '125%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #060a17;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .text-gradient-yellow {
+            background: linear-gradient(180deg, #FFF500 0%, #FFB800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-red-banner {
+            background: linear-gradient(90deg, #FF003C 0%, #B30024 100%);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Shine effect for main CTA */
+        .btn-shine-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                60deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 md:pb-12 text-slate-100">
+
+    <div class="bg-navyCard/90 border-b border-navyBorder py-2 px-3 text-xs text-gray-300">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emeraldSuccess animate-ping"></span>
+                <span class="font-bold text-yellow-300">Ads Conversion Mode Active</span>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                <i class="fa-brands fa-telegram text-telegramBlue"></i>
+                <label for="admin-tg-input" class="text-[11px] text-gray-400">Telegram Link:</label>
+                <input type="text" id="admin-tg-input" value="https://t.me/your_telegram_channel" 
+                       class="bg-navyDark border border-navyBorder text-yellow-300 text-xs rounded px-2.5 py-1 w-56 focus:outline-none focus:border-telegramBlue transition"
+                       title="Edit this URL to update all CTA buttons instantly!">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-red-600 via-brandRed to-red-600 text-white py-2.5 px-4 text-center font-bold text-xs sm:text-sm tracking-wide shadow-lg flex justify-center items-center gap-2">
+        <i class="fa-solid fa-fire text-yellow-300 animate-bounce"></i>
+        <span>SPECIAL OFFER ENDS IN:</span>
+        <span id="countdown-timer" class="bg-navyDark text-yellow-300 font-mono px-2.5 py-0.5 rounded border border-yellow-400/40 font-black text-sm">09:59</span>
+        <span class="hidden sm:inline">| EARN UP TO 11% DAILY!</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-navyDark/90 backdrop-blur-md border-b border-navyBorder/60 py-3 px-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-2.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-blue-700 flex items-center justify-center font-heading font-black text-2xl text-white shadow-lg shadow-sky-500/20">
+                    H
+                </div>
+                <div>
+                    <h1 class="text-xl font-heading font-black tracking-tight text-white leading-none">
+                        HAAS <span class="text-sky-400">PAY</span>
+                    </h1>
+                    <p class="text-[10px] tracking-widest text-gray-400 font-extrabold uppercase mt-0.5">SIMPLE • SAFE • FAST</p>
+                </div>
+            </div>
+
+            <!-- Header CTA Button -->
+            <a href="#" class="tg-link-btn hidden sm:flex items-center gap-2 bg-telegramBlue hover:bg-sky-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs shadow-lg transition transform active:scale-95">
+                <i class="fa-brands fa-telegram text-base"></i>
+                <span>JOIN TELEGRAM</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pt-6 space-y-8">
+
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-navyCard via-navyDark to-navyDark border border-navyBorder p-5 sm:p-8 shadow-2xl">
+            <!-- Glow Effects -->
+            <div class="absolute -top-16 -right-16 w-60 h-60 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-60 h-60 bg-brandRed/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="text-center space-y-5 relative z-10">
+                
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center items-center gap-2 text-xs font-extrabold">
+                    <span class="bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 px-3.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-shield-check text-emerald-400"></i> 100% SAFE & VERIFIED
+                    </span>
+                    <span class="bg-sky-950/80 border border-sky-500/40 text-sky-300 px-3.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-bolt text-yellow-300"></i> INSTANT WITHDRAWAL
+                    </span>
+                </div>
+
+                <!-- Main Poster Catchy Headline -->
+                <div class="space-y-2">
+                    <p class="text-gray-300 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-sky-400">
+                        OFFICIAL DEPOSIT COMMISSION APP
+                    </p>
+                    <h2 class="text-3xl sm:text-5xl font-heading font-black tracking-tight leading-none uppercase">
+                        DEPOSIT COMMISSION EVERY<br>
+                        <span class="text-gradient-yellow text-4xl sm:text-6xl drop-shadow-md">3% TO 11%</span>
+                    </h2>
+                </div>
+
+                <!-- Red Banner Slogan -->
+                <div class="bg-red-banner text-white font-heading font-black text-lg sm:text-2xl py-3.5 px-6 rounded-2xl shadow-xl transform -rotate-1 hover:rotate-0 transition inline-block w-full max-w-lg border border-red-400/40 uppercase tracking-wide">
+                    ⚡ MAKE MONEY IS BIG THIS TIME! ⚡
+                </div>
+
+                <!-- User Counter & Social Proof -->
+                <div class="flex justify-center items-center gap-5 text-xs text-gray-300 pt-1">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-users text-sky-400 text-sm"></i>
+                        <span class="font-extrabold text-white text-sm">42,850+</span> Earning Today
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                        <span class="font-bold text-white">4.9/5</span> Rating
+                    </div>
+                </div>
+
+                <!-- Primary Telegram CTA Button -->
+                <div class="pt-2">
+                    <a href="#" class="tg-link-btn btn-shine-container inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-electricYellow hover:bg-yellow-300 text-navyDark font-heading font-black text-lg sm:text-xl py-4 px-8 rounded-2xl shadow-2xl animate-pulse-glow transition transform hover:scale-105 active:scale-95 uppercase tracking-wide border-2 border-yellow-200">
+                        <i class="fa-brands fa-telegram text-2xl text-telegramBlue"></i>
+                        <span>JOIN TELEGRAM CHANNEL NOW</span>
+                    </a>
+                    <p class="text-[11px] text-gray-400 mt-2.5 font-semibold">
+                        <i class="fa-solid fa-download text-yellow-400 mr-1"></i> Download App • Instant Access • 24/7 VIP Support
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <div class="text-center space-y-1">
+                <span class="bg-brandRed/20 text-brandRed font-extrabold text-[11px] px-3.5 py-1 rounded-full uppercase tracking-wider">High Return Rates</span>
+                <h3 class="text-2xl font-heading font-extrabold text-white">Official Deposit Commission Tiers</h3>
+                <p class="text-gray-400 text-xs">Direct payouts on every deposit transaction completed in HAAS PAY</p>
+            </div>
+
+            <div class="glass-card rounded-3xl overflow-hidden shadow-xl border border-navyBorder">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs sm:text-sm">
+                        <thead class="bg-navyDark/90 uppercase text-[10px] text-gray-400 border-b border-navyBorder tracking-wider">
+                            <tr>
+                                <th class="py-3.5 px-4">Deposit Range</th>
+                                <th class="py-3.5 px-4">Income Rate</th>
+                                <th class="py-3.5 px-4">Quota Bonus</th>
+                                <th class="py-3.5 px-4 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-navyBorder/60 font-semibold">
+                            <tr class="hover:bg-navyCard/60 transition">
+                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹100 - ₹199 INR
+                                </td>
+                                <td class="py-4 px-4 text-emerald-400 font-bold">₹3 (3%)</td>
+                                <td class="py-4 px-4 text-yellow-300 font-bold">+103</td>
+                                <td class="py-4 px-4 text-center">
+                                    <a href="#" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-navyCard/60 transition">
+                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹200 - ₹499 INR
+                                </td>
+                                <td class="py-4 px-4 text-emerald-400 font-bold">₹6 (3%)</td>
+                                <td class="py-4 px-4 text-yellow-300 font-bold">+206</td>
+                                <td class="py-4 px-4 text-center">
+                                    <a href="#" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-navyCard/60 transition">
+                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹500 - ₹999 INR
+                                </td>
+                                <td class="py-4 px-4 text-emerald-400 font-bold">₹15.5 (3.1%)</td>
+                                <td class="py-4 px-4 text-yellow-300 font-bold">+515.5</td>
+                                <td class="py-4 px-4 text-center">
+                                    <a href="#" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-navyCard/60 transition">
+                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹1,000 - ₹2,999 INR
+                                </td>
+                                <td class="py-4 px-4 text-emerald-400 font-bold">₹31 (3.1%)</td>
+                                <td class="py-4 px-4 text-yellow-300 font-bold">+1031</td>
+                                <td class="py-4 px-4 text-center">
+                                    <a href="#" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-yellow-400/10">
+                                <td class="py-4 px-4 font-black text-yellow-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-crown text-yellow-400"></i> ₹3,000+ VIP Tiers
+                                </td>
+                                <td class="py-4 px-4 text-emerald-400 font-black">Up to 11%</td>
+                                <td class="py-4 px-4 text-yellow-300 font-bold">+5000+</td>
+                                <td class="py-4 px-4 text-center">
+                                    <a href="#" class="tg-link-btn inline-block bg-electricYellow text-navyDark font-extrabold py-1.5 px-3 rounded-xl text-xs hover:bg-yellow-300 transition">VIP Access</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-sky-500/50 transition">
+                <div class="w-11 h-11 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl mx-auto">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h4 class="font-extrabold text-sm text-white">Safe & Secure</h4>
+                <p class="text-[11px] text-gray-400 leading-tight">100% Protected System</p>
+            </div>
+
+            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-yellow-500/50 transition">
+                <div class="w-11 h-11 rounded-2xl bg-yellow-500/15 text-yellow-400 flex items-center justify-center text-xl mx-auto">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h4 class="font-extrabold text-sm text-white">Fast Transactions</h4>
+                <p class="text-[11px] text-gray-400 leading-tight">Instant Auto Payouts</p>
+            </div>
+
+            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-emerald-500/50 transition">
+                <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl mx-auto">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h4 class="font-extrabold text-sm text-white">High Commission</h4>
+                <p class="text-[11px] text-gray-400 leading-tight">Earn 3% to 11% Daily</p>
+            </div>
+
+            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-purple-500/50 transition">
+                <div class="w-11 h-11 rounded-2xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl mx-auto">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h4 class="font-extrabold text-sm text-white">24/7 Support</h4>
+                <p class="text-[11px] text-gray-400 leading-tight">Dedicated Telegram VIP</p>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-5 space-y-4">
+            <div class="flex justify-between items-center border-b border-navyBorder/80 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emeraldSuccess animate-ping"></span>
+                    <h3 class="font-heading font-extrabold text-lg text-white">Live Withdrawal Feed</h3>
+                </div>
+                <span class="text-[10px] text-gray-400 bg-navyDark px-2.5 py-1 rounded-full border border-navyBorder">Real-Time Proof</span>
+            </div>
+
+            <!-- Ticker Rows -->
+            <div id="live-withdrawal-feed" class="space-y-2 text-xs">
+                <!-- Dynamically populated via Javascript -->
+            </div>
+
+            <div class="pt-2 text-center">
+                <a href="#" class="tg-link-btn inline-flex items-center gap-2 text-xs font-extrabold text-telegramBlue hover:text-sky-300">
+                    <span>See All Live Payment Screenshots On Telegram</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <div class="text-center space-y-1">
+                <span class="text-xs font-bold text-sky-400 uppercase tracking-widest"><i class="fa-solid fa-circle-question mr-1"></i> Need Help?</span>
+                <h3 class="text-2xl font-heading font-extrabold text-white">Frequently Asked Questions</h3>
+            </div>
+
+            <div class="space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
+                    <button onclick="toggleFaq('faq-1')" class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white hover:bg-navyCard/50">
+                        <span>How do I get started with HAAS PAY?</span>
+                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40">
+                        Join our official Telegram channel by clicking any button on this page. Our Telegram bot/admin will immediately provide you with the fast download link and bonus access codes.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
+                    <button onclick="toggleFaq('faq-2')" class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white hover:bg-navyCard/50">
+                        <span>How is the 3% to 11% commission credited?</span>
+                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40">
+                        Commission is added instantly to your wallet quota as soon as a deposit transaction is processed. You can withdraw your earnings directly to your bank or UPI anytime.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
+                    <button onclick="toggleFaq('faq-3')" class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white hover:bg-navyCard/50">
+                        <span>Is HAAS PAY safe to use?</span>
+                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40">
+                        Yes, 100%. HAAS PAY utilizes bank-grade SSL encryption and automated fast gateway systems to ensure all deposits and withdrawals are processed instantly and securely.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-red-banner rounded-3xl p-6 sm:p-8 text-center text-white space-y-4 shadow-2xl relative overflow-hidden border border-red-500/40">
+            <h3 class="text-2xl sm:text-3xl font-heading font-black uppercase tracking-tight">
+                START EARNING BIG TODAY!
+            </h3>
+            <p class="text-xs sm:text-sm text-white/90 max-w-md mx-auto leading-relaxed">
+                Join our official Telegram channel right now to get the official app download link and start earning up to 11% daily commission.
+            </p>
+            <div>
+                <a href="#" class="tg-link-btn inline-flex items-center justify-center gap-3 bg-electricYellow hover:bg-yellow-300 text-navyDark font-heading font-black text-lg py-4 px-8 rounded-2xl shadow-xl transition transform hover:scale-105 active:scale-95 border-2 border-yellow-200">
+                    <i class="fa-brands fa-telegram text-2xl text-telegramBlue"></i>
+                    <span>DOWNLOAD HAAS PAY APP</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-navyDark/95 border-t border-navyBorder p-2.5 backdrop-blur-xl sm:hidden">
+        <a href="#" class="tg-link-btn flex items-center justify-center gap-2 bg-electricYellow text-navyDark font-heading font-black py-3.5 px-4 rounded-xl text-center shadow-xl active:scale-95 border border-yellow-200">
+            <i class="fa-brands fa-telegram text-xl text-telegramBlue"></i>
+            <span class="text-sm">JOIN TELEGRAM CHANNEL NOW</span>
+        </a>
+    </div>
+
+    <div id="toast-popup" class="fixed bottom-16 sm:bottom-6 left-4 z-50 transform translate-y-32 opacity-0 transition-all duration-500 pointer-events-none">
+        <div class="bg-navyCard border-2 border-emerald-500/60 shadow-2xl rounded-2xl p-3.5 flex items-center gap-3 max-w-xs backdrop-blur-md">
+            <div class="w-10 h-10 rounded-full bg-emeraldSuccess/20 text-emerald-400 flex items-center justify-center text-lg font-black shrink-0">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="text-xs">
+                <p class="font-bold text-white"><span id="toast-user">Ankit S.</span> withdrew <span id="toast-amount" class="text-emerald-400 font-extrabold">₹1,097.16</span></p>
+                <p class="text-[10px] text-gray-400"><span class="text-emerald-400 font-semibold">Success</span> • <span id="toast-time">Just now</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. CONFIGURABLE TELEGRAM LINK SYNCHRONIZER
+        let TELEGRAM_LINK = "https://t.me/your_telegram_channel";
+
+        const adminTgInput = document.getElementById('admin-tg-input');
+        const tgButtons = document.querySelectorAll('.tg-link-btn');
+
+        function syncTelegramLinks() {
+            const currentUrl = adminTgInput.value.trim() || TELEGRAM_LINK;
+            tgButtons.forEach(btn => {
+                btn.href = currentUrl;
+                btn.target = "_blank";
+            });
+        }
+
+        adminTgInput.addEventListener('input', syncTelegramLinks);
+        syncTelegramLinks();
+
+        // 2. COUNTDOWN TIMER (09:59)
+        let totalSeconds = 9 * 60 + 59;
+        const countdownEl = document.getElementById('countdown-timer');
+
+        setInterval(() => {
+            if (totalSeconds > 0) {
+                totalSeconds--;
+                const mins = Math.floor(totalSeconds / 60);
+                const secs = totalSeconds % 60;
+                countdownEl.innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            } else {
+                totalSeconds = 9 * 60 + 59; // Reset for continuous urgency
+            }
+        }, 1000);
+
+        // 3. LIVE WITHDRAWAL FEED (Matching poster screenshot items)
+        const withdrawalHistory = [
+            { name: "Rahul W.", amount: "99.74", orderId: "UI202609211436344", time: "14:36:34" },
+            { name: "Priya K.", amount: "99.55", orderId: "UI202609211423284", time: "14:23:28" },
+            { name: "Amit S.", amount: "99.69", orderId: "UI202609211414526", time: "14:14:52" },
+            { name: "Vikram R.", amount: "99.72", orderId: "UI202609211409556", time: "14:09:55" },
+            { name: "Suresh P.", amount: "99.94", orderId: "UI202609211400277", time: "14:00:27" },
+            { name: "Ankit D.", amount: "99.59", orderId: "UI202609211355311", time: "13:55:31" }
+        ];
+
+        const liveFeedEl = document.getElementById('live-withdrawal-feed');
+
+        function renderFeed() {
+            liveFeedEl.innerHTML = withdrawalHistory.slice(0, 4).map(item => `
+                <div class="flex justify-between items-center bg-navyDark/90 p-3 rounded-xl border border-navyBorder hover:border-emerald-500/30 transition">
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-white text-xs">${item.name}</span>
+                            <span class="text-emerald-400 font-extrabold text-xs">₹${item.amount}</span>
+                            <span class="bg-emeraldSuccess/15 text-emerald-400 font-extrabold text-[9px] px-1.5 py-0.2 rounded border border-emerald-500/30">SUCCESS</span>
+                        </div>
+                        <p class="text-[10px] text-gray-500 font-mono">Order ID: ${item.orderId}</p>
+                    </div>
+                    <span class="text-[10px] text-gray-400">${item.time}</span>
+                </div>
+            `).join('');
+        }
+        renderFeed();
+
+        // 4. REAL-TIME CONVERSION TOAST POPUPS
+        const toastPopup = document.getElementById('toast-popup');
+        const toastUser = document.getElementById('toast-user');
+        const toastAmount = document.getElementById('toast-amount');
+
+        const userNames = ["Deepak from Delhi", "Rohit from Jaipur", "Anjali from Mumbai", "Karan from Lucknow", "Manoj from Patna"];
+        const earnAmounts = ["₹99.74", "₹1,097.16", "₹733.12", "₹99.55", "₹2,500.00"];
+
+        function showDynamicToast() {
+            const randomUser = userNames[Math.floor(Math.random() * userNames.length)];
+            const randomAmt = earnAmounts[Math.floor(Math.random() * earnAmounts.length)];
+
+            toastUser.innerText = randomUser;
+            toastAmount.innerText = randomAmt;
+
+            toastPopup.classList.remove('translate-y-32', 'opacity-0');
+            toastPopup.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toastPopup.classList.remove('translate-y-0', 'opacity-100');
+                toastPopup.classList.add('translate-y-32', 'opacity-0');
+            }, 3500);
+        }
+
+        // Trigger toast every 8 seconds
+        setInterval(showDynamicToast, 8000);
+
+        // 5. FAQ ACCORDION TOGGLE
+        function toggleFaq(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`${id}-icon`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
