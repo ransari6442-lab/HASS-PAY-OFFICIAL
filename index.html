@@ -1,452 +1,772 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>HAAS PAY - Simple • Safe • Fast | Earn 3% to 11% Commission</title>
-    
-    <!-- Meta Pixel Code -->
-    <script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>HAAS PAY - Register Now</title>
+  <meta name="description" content="HAAS PAY registration page. Create your account and get started.">
+
+  <!-- Meta Pixel Code -->
+
+  <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+
     fbq('init', '1442207944470614');
     fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
+  </script>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navyDark: '#060a17',
-                        navyCard: '#0f172a',
-                        navyBorder: '#1e293b',
-                        electricYellow: '#FFE600',
-                        brandRed: '#FF003C',
-                        brandRedDark: '#C9002E',
-                        telegramBlue: '#229ED9',
-                        emeraldSuccess: '#00E676',
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                    },
-                    animation: {
-                        'pulse-glow': 'pulseGlow 1.5s infinite alternate',
-                        'float': 'float 3s ease-in-out infinite',
-                        'shine': 'shine 2s infinite',
-                    },
-                    keyframes: {
-                        pulseGlow: {
-                            '0%': { boxShadow: '0 0 15px rgba(255, 230, 0, 0.4), 0 0 5px rgba(255, 0, 60, 0.3)' },
-                            '100%': { boxShadow: '0 0 35px rgba(255, 230, 0, 0.9), 0 0 18px rgba(255, 0, 60, 0.7)' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-6px)' }
-                        },
-                        shine: {
-                            '100%': { left: '125%' }
-                        }
-                    }
-                }
+  <!-- End Meta Pixel Code -->
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1442207944470614&ev=PageView&noscript=1"
+      alt=""
+    >
+  </noscript>
+
+  <!-- Tailwind CSS -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <!-- Google Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navyDark: '#060a17',
+            navyCard: '#0f172a',
+            navyBorder: '#1e293b',
+            electricYellow: '#FFE600',
+            brandRed: '#FF003C',
+            telegramBlue: '#229ED9',
+            emeraldSuccess: '#00E676'
+          },
+
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          },
+
+          animation: {
+            'pulse-glow': 'pulseGlow 1.5s infinite alternate',
+            'float': 'float 3s ease-in-out infinite',
+            'shine': 'shine 3s infinite'
+          },
+
+          keyframes: {
+            pulseGlow: {
+              '0%': {
+                boxShadow:
+                  '0 0 15px rgba(255,230,0,.35), 0 0 5px rgba(255,0,60,.25)'
+              },
+              '100%': {
+                boxShadow:
+                  '0 0 35px rgba(255,230,0,.8), 0 0 18px rgba(255,0,60,.55)'
+              }
+            },
+
+            float: {
+              '0%,100%': {
+                transform: 'translateY(0)'
+              },
+              '50%': {
+                transform: 'translateY(-6px)'
+              }
+            },
+
+            shine: {
+              '100%': {
+                left: '125%'
+              }
             }
+          }
         }
-    </script>
+      }
+    };
+  </script>
 
-    <style>
-        body {
-            background-color: #060a17;
-            color: #ffffff;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        .font-heading {
-            font-family: 'Outfit', sans-serif;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .text-gradient-yellow {
-            background: linear-gradient(180deg, #FFF500 0%, #FFB800 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(37, 99, 235, 0.13),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at bottom left,
+          rgba(255, 0, 60, 0.12),
+          transparent 30%
+        ),
+        #060a17;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        .bg-red-banner {
-            background: linear-gradient(90deg, #FF003C 0%, #B30024 100%);
-        }
+    .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
 
-        .glass-card {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
+    .text-gradient-yellow {
+      background: linear-gradient(
+        180deg,
+        #fff500 0%,
+        #ffb800 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .btn-shine-container {
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-shine-container::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                60deg,
-                transparent,
-                rgba(255, 255, 255, 0.3),
-                transparent
-            );
-            transform: rotate(30deg);
-            animation: shine 3s infinite;
-        }
-    </style>
+    .glass-card {
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .red-banner {
+      background:
+        linear-gradient(
+          90deg,
+          #ff003c 0%,
+          #b30024 50%,
+          #ff003c 100%
+        );
+    }
+
+    .register-btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .register-btn::after {
+      content: "";
+      position: absolute;
+      top: -80%;
+      left: -120%;
+      width: 60%;
+      height: 260%;
+      background: rgba(255,255,255,.32);
+      transform: rotate(25deg);
+      animation: buttonShine 3s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes buttonShine {
+      0% {
+        left: -120%;
+      }
+      45%,
+      100% {
+        left: 140%;
+      }
+    }
+
+    .feature-card {
+      transition:
+        transform .25s ease,
+        border-color .25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 230, 0, .4);
+    }
+
+    .faq-answer {
+      transition: all .25s ease;
+    }
+
+    .countdown {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+
 </head>
-<body class="min-h-screen pb-24 md:pb-12 text-slate-100">
-    <!-- Meta Pixel Noscript -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1442207944470614&ev=PageView&noscript=1"
-    /></noscript>
 
-    <div class="bg-navyCard/90 border-b border-navyBorder py-2 px-3 text-xs text-gray-300">
-        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emeraldSuccess animate-ping"></span>
-                <span class="font-bold text-yellow-300">Ads Conversion & Pixel Active</span>
-            </div>
-            <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-                <i class="fa-brands fa-telegram text-telegramBlue"></i>
-                <label for="admin-tg-input" class="text-[11px] text-gray-400">Telegram Link:</label>
-                <input type="text" id="admin-tg-input" value="https://t.me/+uARtrauQcfUwMzM0" 
-                       class="bg-navyDark border border-navyBorder text-yellow-300 text-xs rounded px-2.5 py-1 w-56 focus:outline-none focus:border-telegramBlue transition"
-                       title="Edit URL to sync all tracked CTA buttons!">
-            </div>
-        </div>
+<body class="pb-24 md:pb-8">
+
+  <!-- Top Status Bar -->
+
+  <div class="bg-navyCard/90 border-b border-navyBorder py-2 px-3">
+    <div class="max-w-4xl mx-auto flex justify-center items-center gap-2 text-xs">
+      <span class="w-2.5 h-2.5 rounded-full bg-emeraldSuccess animate-pulse"></span>
+      <span class="font-bold text-gray-300">
+        HAAS PAY REGISTRATION
+      </span>
+    </div>
+  </div>
+
+  <!-- Offer Timer -->
+
+  <div class="red-banner text-white py-2.5 px-4 text-center font-bold text-xs sm:text-sm tracking-wide shadow-lg">
+    <div class="flex justify-center items-center gap-2">
+      <i class="fa-solid fa-bolt text-yellow-300"></i>
+      <span>REGISTRATION WINDOW</span>
+
+```
+  <span
+    id="countdown-timer"
+    class="countdown bg-navyDark text-yellow-300 font-mono px-3 py-1 rounded border border-yellow-400/40 font-black"
+  >
+    09:59
+  </span>
+</div>
+```
+
+  </div>
+
+  <!-- Header -->
+
+  <header class="sticky top-0 z-40 bg-navyDark/90 backdrop-blur-md border-b border-navyBorder/60 py-3 px-4">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+
+```
+  <div class="flex items-center gap-2.5">
+    <div
+      class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-blue-700 flex items-center justify-center font-heading font-black text-2xl text-white shadow-lg"
+    >
+      H
     </div>
 
-    <div class="bg-gradient-to-r from-red-600 via-brandRed to-red-600 text-white py-2.5 px-4 text-center font-bold text-xs sm:text-sm tracking-wide shadow-lg flex justify-center items-center gap-2">
-        <i class="fa-solid fa-fire text-yellow-300 animate-bounce"></i>
-        <span>SPECIAL OFFER ENDS IN:</span>
-        <span id="countdown-timer" class="bg-navyDark text-yellow-300 font-mono px-2.5 py-0.5 rounded border border-yellow-400/40 font-black text-sm">09:59</span>
-        <span class="hidden sm:inline">| EARN UP TO 11% DAILY!</span>
+    <div>
+      <h1 class="text-xl font-heading font-black tracking-tight leading-none">
+        HAAS <span class="text-sky-400">PAY</span>
+      </h1>
+
+      <p class="text-[10px] tracking-widest text-gray-400 font-extrabold uppercase mt-0.5">
+        SIMPLE • FAST • EASY
+      </p>
+    </div>
+  </div>
+
+  <!-- Desktop Register -->
+  <a
+    href="https://d3ca36aesr7v4v.cloudfront.net/?uid=55076737"
+    onclick="handleRegisterClick('Header_Register')"
+    class="hidden sm:flex items-center gap-2 bg-telegramBlue hover:bg-sky-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs shadow-lg transition active:scale-95"
+  >
+    <i class="fa-solid fa-user-plus"></i>
+    REGISTER NOW
+  </a>
+
+</div>
+```
+
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 pt-6 space-y-8">
+
+```
+<!-- Hero -->
+<section
+  class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-navyCard via-navyDark to-navyDark border border-navyBorder p-5 sm:p-8 shadow-2xl"
+>
+
+  <div class="absolute -top-16 -right-16 w-60 h-60 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="absolute -bottom-16 -left-16 w-60 h-60 bg-brandRed/20 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="text-center space-y-5 relative z-10">
+
+    <!-- Badge -->
+    <div class="flex justify-center">
+      <span class="bg-sky-950/80 border border-sky-500/40 text-sky-300 px-4 py-2 rounded-full text-xs font-extrabold">
+        <i class="fa-solid fa-user-plus mr-1"></i>
+        CREATE YOUR ACCOUNT
+      </span>
     </div>
 
-    <header class="sticky top-0 z-40 bg-navyDark/90 backdrop-blur-md border-b border-navyBorder/60 py-3 px-4">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <!-- Brand Logo -->
-            <div class="flex items-center space-x-2.5">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-blue-700 flex items-center justify-center font-heading font-black text-2xl text-white shadow-lg shadow-sky-500/20">
-                    H
-                </div>
-                <div>
-                    <h1 class="text-xl font-heading font-black tracking-tight text-white leading-none">
-                        HAAS <span class="text-sky-400">PAY</span>
-                    </h1>
-                    <p class="text-[10px] tracking-widest text-gray-400 font-extrabold uppercase mt-0.5">SIMPLE • SAFE • FAST</p>
-                </div>
-            </div>
+    <!-- Heading -->
+    <div class="space-y-3">
 
-            <!-- Header CTA Button with Pixel Tracker -->
-            <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Header_CTA')" class="tg-link-btn hidden sm:flex items-center gap-2 bg-telegramBlue hover:bg-sky-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs shadow-lg transition transform active:scale-95">
-                <i class="fa-brands fa-telegram text-base"></i>
-                <span>JOIN TELEGRAM</span>
-            </a>
-        </div>
-    </header>
+      <p class="text-gray-300 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-sky-400">
+        HAAS PAY OFFICIAL REGISTRATION
+      </p>
 
-    <main class="max-w-4xl mx-auto px-4 pt-6 space-y-8">
+      <h2 class="text-3xl sm:text-5xl font-heading font-black tracking-tight leading-none uppercase">
+        GET STARTED
+        <br>
 
-        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-navyCard via-navyDark to-navyDark border border-navyBorder p-5 sm:p-8 shadow-2xl">
-            <!-- Glow Effects -->
-            <div class="absolute -top-16 -right-16 w-60 h-60 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-16 -left-16 w-60 h-60 bg-brandRed/20 rounded-full blur-3xl pointer-events-none"></div>
+        <span class="text-gradient-yellow text-4xl sm:text-6xl">
+          REGISTER NOW
+        </span>
+      </h2>
 
-            <div class="text-center space-y-5 relative z-10">
-                
-                <!-- Trust Badges -->
-                <div class="flex flex-wrap justify-center items-center gap-2 text-xs font-extrabold">
-                    <span class="bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 px-3.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
-                        <i class="fa-solid fa-shield-check text-emerald-400"></i> 100% SAFE & VERIFIED
-                    </span>
-                    <span class="bg-sky-950/80 border border-sky-500/40 text-sky-300 px-3.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
-                        <i class="fa-solid fa-bolt text-yellow-300"></i> INSTANT WITHDRAWAL
-                    </span>
-                </div>
+      <p class="max-w-xl mx-auto text-gray-400 text-sm leading-relaxed">
+        Create your HAAS PAY account and continue to the registration page.
+      </p>
 
-                <!-- Main Poster Catchy Headline -->
-                <div class="space-y-2">
-                    <p class="text-gray-300 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-sky-400">
-                        OFFICIAL DEPOSIT COMMISSION APP
-                    </p>
-                    <h2 class="text-3xl sm:text-5xl font-heading font-black tracking-tight leading-none uppercase">
-                        DEPOSIT COMMISSION EVERY<br>
-                        <span class="text-gradient-yellow text-4xl sm:text-6xl drop-shadow-md">3% TO 11%</span>
-                    </h2>
-                </div>
-
-                <!-- Red Banner Slogan -->
-                <div class="bg-red-banner text-white font-heading font-black text-lg sm:text-2xl py-3.5 px-6 rounded-2xl shadow-xl transform -rotate-1 hover:rotate-0 transition inline-block w-full max-w-lg border border-red-400/40 uppercase tracking-wide">
-                    ⚡ MAKE MONEY IS BIG THIS TIME! ⚡
-                </div>
-
-                <!-- User Counter & Social Proof -->
-                <div class="flex justify-center items-center gap-5 text-xs text-gray-300 pt-1">
-                    <div class="flex items-center gap-1.5">
-                        <i class="fa-solid fa-users text-sky-400 text-sm"></i>
-                        <span class="font-extrabold text-white text-sm">42,850+</span> Earning Today
-                    </div>
-                    <div class="flex items-center gap-1.5">
-                        <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-                        <span class="font-bold text-white">4.9/5</span> Rating
-                    </div>
-                </div>
-
-                <!-- Primary Telegram CTA Button -->
-                <div class="pt-2">
-                    <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Hero_Main_CTA')" class="tg-link-btn btn-shine-container inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-electricYellow hover:bg-yellow-300 text-navyDark font-heading font-black text-lg sm:text-xl py-4 px-8 rounded-2xl shadow-2xl animate-pulse-glow transition transform hover:scale-105 active:scale-95 uppercase tracking-wide border-2 border-yellow-200">
-                        <i class="fa-brands fa-telegram text-2xl text-telegramBlue"></i>
-                        <span>JOIN TELEGRAM CHANNEL NOW</span>
-                    </a>
-                    <p class="text-[11px] text-gray-400 mt-2.5 font-semibold">
-                        <i class="fa-solid fa-download text-yellow-400 mr-1"></i> Download App • Instant Access • 24/7 VIP Support
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="space-y-4">
-            <div class="text-center space-y-1">
-                <span class="bg-brandRed/20 text-brandRed font-extrabold text-[11px] px-3.5 py-1 rounded-full uppercase tracking-wider">High Return Rates</span>
-                <h3 class="text-2xl font-heading font-extrabold text-white">Official Deposit Commission Tiers</h3>
-                <p class="text-gray-400 text-xs">Direct payouts on every deposit transaction completed in HAAS PAY</p>
-            </div>
-
-            <div class="glass-card rounded-3xl overflow-hidden shadow-xl border border-navyBorder">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs sm:text-sm">
-                        <thead class="bg-navyDark/90 uppercase text-[10px] text-gray-400 border-b border-navyBorder tracking-wider">
-                            <tr>
-                                <th class="py-3.5 px-4">Deposit Range</th>
-                                <th class="py-3.5 px-4">Income Rate</th>
-                                <th class="py-3.5 px-4">Quota Bonus</th>
-                                <th class="py-3.5 px-4 text-center">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-navyBorder/60 font-semibold">
-                            <tr class="hover:bg-navyCard/60 transition">
-                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹100 - ₹199 INR
-                                </td>
-                                <td class="py-4 px-4 text-emerald-400 font-bold">₹3 (3%)</td>
-                                <td class="py-4 px-4 text-yellow-300 font-bold">+103</td>
-                                <td class="py-4 px-4 text-center">
-                                    <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Tier_100_Claim')" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-navyCard/60 transition">
-                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹200 - ₹499 INR
-                                </td>
-                                <td class="py-4 px-4 text-emerald-400 font-bold">₹6 (3%)</td>
-                                <td class="py-4 px-4 text-yellow-300 font-bold">+206</td>
-                                <td class="py-4 px-4 text-center">
-                                    <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Tier_200_Claim')" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-navyCard/60 transition">
-                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹500 - ₹999 INR
-                                </td>
-                                <td class="py-4 px-4 text-emerald-400 font-bold">₹15.5 (3.1%)</td>
-                                <td class="py-4 px-4 text-yellow-300 font-bold">+515.5</td>
-                                <td class="py-4 px-4 text-center">
-                                    <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Tier_500_Claim')" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-navyCard/60 transition">
-                                <td class="py-4 px-4 font-bold text-white flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-sky-400"></span> ₹1,000 - ₹2,999 INR
-                                </td>
-                                <td class="py-4 px-4 text-emerald-400 font-bold">₹31 (3.1%)</td>
-                                <td class="py-4 px-4 text-yellow-300 font-bold">+1031</td>
-                                <td class="py-4 px-4 text-center">
-                                    <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Tier_1000_Claim')" class="tg-link-btn inline-block bg-navyDark hover:bg-yellow-400 hover:text-navyDark text-yellow-300 font-bold py-1.5 px-3 rounded-xl border border-yellow-400/40 text-xs transition">Claim</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-yellow-400/10">
-                                <td class="py-4 px-4 font-black text-yellow-300 flex items-center gap-2">
-                                    <i class="fa-solid fa-crown text-yellow-400"></i> ₹3,000+ VIP Tiers
-                                </td>
-                                <td class="py-4 px-4 text-emerald-400 font-black">Up to 11%</td>
-                                <td class="py-4 px-4 text-yellow-300 font-bold">+5000+</td>
-                                <td class="py-4 px-4 text-center">
-                                    <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Tier_VIP_Access')" class="tg-link-btn inline-block bg-electricYellow text-navyDark font-extrabold py-1.5 px-3 rounded-xl text-xs hover:bg-yellow-300 transition">VIP Access</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
-            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-sky-500/50 transition">
-                <div class="w-11 h-11 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl mx-auto">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <h4 class="font-extrabold text-sm text-white">Safe & Secure</h4>
-                <p class="text-[11px] text-gray-400 leading-tight">100% Protected System</p>
-            </div>
-
-            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-yellow-500/50 transition">
-                <div class="w-11 h-11 rounded-2xl bg-yellow-500/15 text-yellow-400 flex items-center justify-center text-xl mx-auto">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h4 class="font-extrabold text-sm text-white">Fast Transactions</h4>
-                <p class="text-[11px] text-gray-400 leading-tight">Instant Auto Payouts</p>
-            </div>
-
-            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-emerald-500/50 transition">
-                <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl mx-auto">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <h4 class="font-extrabold text-sm text-white">High Commission</h4>
-                <p class="text-[11px] text-gray-400 leading-tight">Earn 3% to 11% Daily</p>
-            </div>
-
-            <div class="glass-card p-4 rounded-2xl text-center space-y-2 border border-navyBorder hover:border-purple-500/50 transition">
-                <div class="w-11 h-11 rounded-2xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl mx-auto">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-                <h4 class="font-extrabold text-sm text-white">24/7 Support</h4>
-                <p class="text-[11px] text-gray-400 leading-tight">Dedicated Telegram VIP</p>
-            </div>
-        </section>
-
-        <section class="glass-card rounded-3xl p-5 space-y-4">
-            <div class="flex justify-between items-center border-b border-navyBorder/80 pb-3">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emeraldSuccess animate-ping"></span>
-                    <h3 class="font-heading font-extrabold text-lg text-white">Live Withdrawal Feed</h3>
-                </div>
-                <span class="text-[10px] text-gray-400 bg-navyDark px-2.5 py-1 rounded-full border border-navyBorder">Real-Time Proof</span>
-            </div>
-
-            <div id="live-withdrawal-feed" class="space-y-2 text-xs">
-                <!-- Dynamically populated via Javascript -->
-            </div>
-
-            <div class="pt-2 text-center">
-                <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Live_Feed_See_All')" class="tg-link-btn inline-flex items-center gap-2 text-xs font-extrabold text-telegramBlue hover:text-sky-300">
-                    <span>See All Live Payment Screenshots On Telegram</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
-
-        <section class="space-y-4">
-            <div class="text-center space-y-1">
-                <span class="text-xs font-bold text-sky-400 uppercase tracking-widest"><i class="fa-solid fa-circle-question mr-1"></i> Need Help?</span>
-                <h3 class="text-2xl font-heading font-extrabold text-white">Frequently Asked Questions</h3>
-            </div>
-
-            <div class="space-y-3">
-                <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
-                    <button onclick="toggleFaq('faq-1')" class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white hover:bg-navyCard/50">
-                        <span>How do I get started with HAAS PAY?</span>
-                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
-                    </button>
-                    <div id="faq-1" class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40">
-                        Join our official Telegram channel by clicking any button on this page. Our Telegram channel provides you with the fast download link and bonus access codes.
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
-                    <button onclick="toggleFaq('faq-2')" class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white hover:bg-navyCard/50">
-                        <span>How is the 3% to 11% commission credited?</span>
-                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
-                    </button>
-                    <div id="faq-2" class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40">
-                        Commission is added instantly to your wallet quota as soon as a deposit transaction is processed. You can withdraw your earnings directly to your bank or UPI anytime.
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
-                    <button onclick="toggleFaq('faq-3')" class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white hover:bg-navyCard/50">
-                        <span>Is HAAS PAY safe to use?</span>
-                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
-                    </button>
-                    <div id="faq-3" class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40">
-                        Yes, 100%. HAAS PAY utilizes bank-grade SSL encryption and automated fast gateway systems to ensure all deposits and withdrawals are processed instantly and securely.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-red-banner rounded-3xl p-6 sm:p-8 text-center text-white space-y-4 shadow-2xl relative overflow-hidden border border-red-500/40">
-            <h3 class="text-2xl sm:text-3xl font-heading font-black uppercase tracking-tight">
-                START EARNING BIG TODAY!
-            </h3>
-            <p class="text-xs sm:text-sm text-white/90 max-w-md mx-auto leading-relaxed">
-                Join our official Telegram channel right now to get the official app download link and start earning up to 11% daily commission.
-            </p>
-            <div>
-                <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Bottom_Banner_Download')" class="tg-link-btn inline-flex items-center justify-center gap-3 bg-electricYellow hover:bg-yellow-300 text-navyDark font-heading font-black text-lg py-4 px-8 rounded-2xl shadow-xl transition transform hover:scale-105 active:scale-95 border-2 border-yellow-200">
-                    <i class="fa-brands fa-telegram text-2xl text-telegramBlue"></i>
-                    <span>DOWNLOAD HAAS PAY APP</span>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-navyDark/95 border-t border-navyBorder p-2.5 backdrop-blur-xl sm:hidden">
-        <a href="https://t.me/+uARtrauQcfUwMzM0" onclick="handleCtaClick(event, 'Sticky_Mobile_Bottom_Bar')" class="tg-link-btn flex items-center justify-center gap-2 bg-electricYellow text-navyDark font-heading font-black py-3.5 px-4 rounded-xl text-center shadow-xl active:scale-95 border border-yellow-200">
-            <i class="fa-brands fa-telegram text-xl text-telegramBlue"></i>
-            <span class="text-sm">JOIN TELEGRAM CHANNEL NOW</span>
-        </a>
     </div>
 
-    <div id="toast-popup" class="fixed bottom-16 sm:bottom-6 left-4 z-50 transform translate-y-32 opacity-0 transition-all duration-500 pointer-events-none">
-        <div class="bg-navyCard border-2 border-emerald-500/60 shadow-2xl rounded-2xl p-3.5 flex items-center gap-3 max-w-xs backdrop-blur-md">
-            <div class="w-10 h-10 rounded-full bg-emeraldSuccess/20 text-emerald-400 flex items-center justify-center text-lg font-black shrink-0">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div class="text-xs">
-                <p class="font-bold text-white"><span id="toast-user">Ankit S.</span> withdrew <span id="toast-amount" class="text-emerald-400 font-extrabold">₹1,097.16</span></p>
-                <p class="text-[10px] text-gray-400"><span class="text-emerald-400 font-semibold">Success</span> • <span id="toast-time">Just now</span></p>
-            </div>
-        </div>
+    <!-- Banner -->
+    <div
+      class="red-banner text-white font-heading font-black text-lg sm:text-2xl py-3.5 px-6 rounded-2xl shadow-xl transform -rotate-1 hover:rotate-0 transition inline-block w-full max-w-lg border border-red-400/40 uppercase tracking-wide"
+    >
+      <i class="fa-solid fa-rocket mr-2"></i>
+      START YOUR REGISTRATION
     </div>
 
-    <script>
-        // 1. CONFIGURABLE TELEGRAM LINK & META PIXEL EVENT TRACKER
-        let TELEGRAM_LINK = "https://t.me/+uARtrauQcfUwMzM0";
+    <!-- Register Button -->
+    <div class="pt-2">
 
-        const adminTgInput = document.getElementById('admin-tg-input');
-        const tgButtons = document.querySelectorAll('.tg-link-btn');
+      <a
+        href="https://d3ca36aesr7v4v.cloudfront.net/?uid=55076737"
+        onclick="handleRegisterClick('Hero_Register')"
+        class="register-btn inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-electricYellow hover:bg-yellow-300 text-navyDark font-heading font-black text-lg sm:text-xl py-4 px-9 rounded-2xl shadow-2xl animate-pulse-glow transition transform hover:scale-105 active:scale-95 uppercase tracking-wide border-2 border-yellow-200"
+      >
+        <i class="fa-solid fa-user-plus text-2xl text-brandRed"></i>
+        <span>REGISTER NOW</span>
+      </a>
 
-        function syncTelegramLinks() {
-            const currentUrl = adminTgInput.value.trim() || TELEGRAM_LINK;
-            TELEGRAM_LINK = currentUrl;
-            tgButtons.forEach(btn => {
+      <p class="text-[11px] text-gray-400 mt-2.5 font-semibold">
+        <i class="fa-solid fa-arrow-up-right-from-square text-yellow-400 mr-1"></i>
+        Continue to registration
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="space-y-4">
+
+  <div class="text-center space-y-1">
+    <span class="text-sky-400 font-extrabold text-[11px] uppercase tracking-wider">
+      SIMPLE PROCESS
+    </span>
+
+    <h3 class="text-2xl font-heading font-extrabold text-white">
+      How To Register
+    </h3>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+
+    <div class="glass-card p-5 rounded-2xl text-center">
+      <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl mx-auto mb-3">
+        <i class="fa-solid fa-arrow-pointer"></i>
+      </div>
+
+      <h4 class="font-extrabold text-white">
+        01. Click Register
+      </h4>
+
+      <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+        Click the Register Now button to open the registration page.
+      </p>
+    </div>
+
+    <div class="glass-card p-5 rounded-2xl text-center">
+      <div class="w-12 h-12 rounded-2xl bg-yellow-500/15 text-yellow-400 flex items-center justify-center text-xl mx-auto mb-3">
+        <i class="fa-solid fa-user-plus"></i>
+      </div>
+
+      <h4 class="font-extrabold text-white">
+        02. Create Account
+      </h4>
+
+      <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+        Enter the information requested on the registration page.
+      </p>
+    </div>
+
+    <div class="glass-card p-5 rounded-2xl text-center">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl mx-auto mb-3">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <h4 class="font-extrabold text-white">
+        03. Get Started
+      </h4>
+
+      <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+        Complete registration and continue with your account.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Features -->
+<section class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+
+  <div class="feature-card glass-card p-4 rounded-2xl text-center space-y-2">
+    <div class="w-11 h-11 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl mx-auto">
+      <i class="fa-solid fa-mobile-screen-button"></i>
+    </div>
+
+    <h4 class="font-extrabold text-sm text-white">
+      Mobile Friendly
+    </h4>
+
+    <p class="text-[11px] text-gray-400 leading-tight">
+      Easy access
+    </p>
+  </div>
+
+  <div class="feature-card glass-card p-4 rounded-2xl text-center space-y-2">
+    <div class="w-11 h-11 rounded-2xl bg-yellow-500/15 text-yellow-400 flex items-center justify-center text-xl mx-auto">
+      <i class="fa-solid fa-bolt"></i>
+    </div>
+
+    <h4 class="font-extrabold text-sm text-white">
+      Quick Access
+    </h4>
+
+    <p class="text-[11px] text-gray-400 leading-tight">
+      Simple process
+    </p>
+  </div>
+
+  <div class="feature-card glass-card p-4 rounded-2xl text-center space-y-2">
+    <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl mx-auto">
+      <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
+    <h4 class="font-extrabold text-sm text-white">
+      Account Setup
+    </h4>
+
+    <p class="text-[11px] text-gray-400 leading-tight">
+      Registration page
+    </p>
+  </div>
+
+  <div class="feature-card glass-card p-4 rounded-2xl text-center space-y-2">
+    <div class="w-11 h-11 rounded-2xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl mx-auto">
+      <i class="fa-solid fa-headset"></i>
+    </div>
+
+    <h4 class="font-extrabold text-sm text-white">
+      Support
+    </h4>
+
+    <p class="text-[11px] text-gray-400 leading-tight">
+      Help available
+    </p>
+  </div>
+
+</section>
+
+<!-- Registration CTA -->
+<section class="red-banner rounded-3xl p-6 sm:p-8 text-center text-white space-y-4 shadow-2xl relative overflow-hidden border border-red-500/40">
+
+  <div class="absolute -top-16 -right-16 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10">
+
+    <h3 class="text-2xl sm:text-3xl font-heading font-black uppercase tracking-tight">
+      READY TO REGISTER?
+    </h3>
+
+    <p class="text-xs sm:text-sm text-white/90 max-w-md mx-auto leading-relaxed mt-2">
+      Click below to open the HAAS PAY registration page and create your account.
+    </p>
+
+    <div class="mt-5">
+
+      <a
+        href="https://d3ca36aesr7v4v.cloudfront.net/?uid=55076737"
+        onclick="handleRegisterClick('Bottom_Register')"
+        class="inline-flex items-center justify-center gap-3 bg-electricYellow hover:bg-yellow-300 text-navyDark font-heading font-black text-lg py-4 px-8 rounded-2xl shadow-xl transition transform hover:scale-105 active:scale-95 border-2 border-yellow-200"
+      >
+        <i class="fa-solid fa-user-plus text-2xl text-brandRed"></i>
+        <span>REGISTER NOW</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="space-y-4">
+
+  <div class="text-center space-y-1">
+    <span class="text-xs font-bold text-sky-400 uppercase tracking-widest">
+      <i class="fa-solid fa-circle-question mr-1"></i>
+      NEED HELP?
+    </span>
+
+    <h3 class="text-2xl font-heading font-extrabold text-white">
+      Frequently Asked Questions
+    </h3>
+  </div>
+
+  <div class="space-y-3">
+
+    <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
+
+      <button
+        onclick="toggleFaq('faq-1','faq-1-icon')"
+        class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white"
+      >
+        <span>How do I register?</span>
+        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+      </button>
+
+      <div
+        id="faq-1"
+        class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40"
+      >
+        Click any Register Now button on this page to open the registration page.
+      </div>
+
+    </div>
+
+    <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
+
+      <button
+        onclick="toggleFaq('faq-2','faq-2-icon')"
+        class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white"
+      >
+        <span>What do I need for registration?</span>
+        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+      </button>
+
+      <div
+        id="faq-2"
+        class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40"
+      >
+        Follow the instructions displayed on the registration page and provide the information requested there.
+      </div>
+
+    </div>
+
+    <div class="glass-card rounded-2xl border border-navyBorder overflow-hidden">
+
+      <button
+        onclick="toggleFaq('faq-3','faq-3-icon')"
+        class="w-full p-4 text-left flex justify-between items-center gap-3 font-bold text-sm text-white"
+      >
+        <span>Where does the Register Now button go?</span>
+        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
+      </button>
+
+      <div
+        id="faq-3"
+        class="hidden p-4 pt-0 text-xs text-gray-300 leading-relaxed border-t border-navyBorder/40"
+      >
+        It opens the HAAS PAY registration URL configured for this landing page.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+```
+
+  </main>
+
+  <!-- Mobile Sticky Register -->
+
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-navyDark/95 border-t border-navyBorder p-2.5 backdrop-blur-xl sm:hidden">
+
+```
+<a
+  href="https://d3ca36aesr7v4v.cloudfront.net/?uid=55076737"
+  onclick="handleRegisterClick('Mobile_Sticky_Register')"
+  class="flex items-center justify-center gap-2 bg-electricYellow text-navyDark font-heading font-black py-3.5 px-4 rounded-xl text-center shadow-xl active:scale-95 border border-yellow-200"
+>
+  <i class="fa-solid fa-user-plus text-xl text-brandRed"></i>
+  <span class="text-sm">REGISTER NOW</span>
+</a>
+```
+
+  </div>
+
+  <!-- Toast -->
+
+  <div
+    id="toast-popup"
+    class="fixed bottom-20 sm:bottom-6 left-4 z-50 translate-y-32 opacity-0 transition-all duration-500 pointer-events-none"
+  >
+    <div class="bg-navyCard border border-emerald-500/50 shadow-2xl rounded-2xl p-3 flex items-center gap-3">
+
+```
+  <div class="w-9 h-9 rounded-full bg-emeraldSuccess/20 text-emerald-400 flex items-center justify-center">
+    <i class="fa-solid fa-check"></i>
+  </div>
+
+  <div class="text-xs">
+    <p class="font-bold text-white">
+      Registration page ready
+    </p>
+
+    <p class="text-[10px] text-gray-400">
+      Click Register Now to continue
+    </p>
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <script>
+
+    /* =========================
+       REGISTRATION URL
+    ========================= */
+
+    const REGISTER_URL =
+      "https://d3ca36aesr7v4v.cloudfront.net/?uid=55076737";
+
+
+    /* =========================
+       META PIXEL TRACKING
+    ========================= */
+
+    function handleRegisterClick(eventName) {
+
+      if (typeof fbq === "function") {
+
+        fbq("trackCustom", "RegisterClick", {
+          button_name: eventName
+        });
+
+      }
+
+    }
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    function toggleFaq(id, iconId) {
+
+      const answer = document.getElementById(id);
+      const icon = document.getElementById(iconId);
+
+      if (!answer || !icon) return;
+
+      answer.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+
+    }
+
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    let remainingSeconds = 599;
+
+    function updateCountdown() {
+
+      const timer =
+        document.getElementById("countdown-timer");
+
+      if (!timer) return;
+
+      const minutes =
+        Math.floor(remainingSeconds / 60);
+
+      const seconds =
+        remainingSeconds % 60;
+
+      timer.textContent =
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(seconds).padStart(2, "0");
+
+      if (remainingSeconds > 0) {
+        remainingSeconds--;
+      } else {
+        remainingSeconds = 599;
+      }
+
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+
+    /* =========================
+       BUTTON RIPPLE / FEEDBACK
+    ========================= */
+
+    document.querySelectorAll('a[href*="cloudfront.net"]').forEach(button => {
+
+      button.addEventListener("click", function() {
+
+        const toast =
+          document.getElementById("toast-popup");
+
+        if (!toast) return;
+
+        toast.classList.remove(
+          "translate-y-32",
+          "opacity-0"
+        );
+
+        toast.classList.add(
+          "translate-y-0",
+          "opacity-100"
+        );
+
+        setTimeout(() => {
+
+          toast.classList.add(
+            "translate-y-32",
+            "opacity-0"
+          );
+
+          toast.classList.remove(
+            "translate-y-0",
+            "opacity-100"
+          );
+
+        }, 1800);
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
+
